@@ -1,0 +1,155 @@
+/* Import the Lucida Handwriting font */
+
+@import url('https://fonts.googleapis.com/css2?family=Lucida+Handwriting&display=swap');
+
+.header-background {
+    background-image: url('https://i.ibb.co/Y7ft3gBt/All-Posts-header.png');
+    background-size: cover; /* Makes sure the image covers the entire header area */
+    background-position: center center; /* Keeps the image centered */
+    height: 250px; /* Adjust the height as needed */
+    display: flex; /* Centers content inside the header */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    color: white; /* Sets the text color to white to contrast with the background */
+    text-align: center; /* Centers text horizontally */
+    font-size: 2rem; /* Adjusts the font size for text inside the header */
+    box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow effect for depth */
+}
+
+.header-background h1 {
+    font-size: 3rem; /* Adjust the title font size */
+    font-weight: bold; /* Makes the title bold */
+}
+
+html, body {
+    height: 100%; /* Ensures the html and body elements take up the full height */
+    margin: 0; /* Removes default margin */
+  }
+
+body {
+    background-image: url(https://i.ibb.co/8nCchkfH/Stock-Snap-EX2-VLYWQFE.jpg);
+    background-size: cover; /* Makes sure the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Makes sure the background takes up the entire height of the page */
+  }/*
+
+Apply the background image to the entire page */
+.all-posts-card {
+    background-image: url('https://i.ibb.co/fdRpTSS4/Header-3.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: 'Lucida Handwriting', cursive;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-card {
+    background-image: url('https://i.ibb.co/KcjK5gxL/Stock-Snap-3-J1-K5-IJO3-O.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: 'Lucida Handwriting', cursive;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Style the heading (All Posts) */
+h2 {
+    text-align: center;
+    color: #110101;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Style for the Topics section */
+h1 {
+    text-align: center;
+    color: #110101;
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+/* Style for the filtered posts section */
+h3 {
+    text-align: center;
+    color: #110101;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+/* Style for the buttons (Post Titles) */
+.post-title-button, .filtered-post-button {
+    background: url('https://i.ibb.co/n8ZH0sqq/Blank-Button.png') no-repeat center center;
+    background-size: cover;
+    border: none;
+    width: 250px;
+    height: 60px;
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 18px;
+    color: #110101;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.post-title-button:hover, .filtered-post-button:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Style for the main "Write a New Post" button */
+.main {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main .post-title-button {
+    width: 300px; /* Larger button for the new post */
+}
+
+/* Style for the "No posts found" message */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #110101
+}
+
+/* Style for the Topic Dropdown section */
+h3 {
+    text-align: center;
+    color: #110101;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Style for the Post Information (Likes and Topic) */
+.all-posts-card div {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+/* Add a white background and border to the likes and topic information */
+.all-posts-card div strong {
+    font-size: 16px;
+    color: #110101;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid white; /* Tomato color border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+/* Add a little padding for post card */
+.all-posts-card button {
+    padding: 15px;
+}

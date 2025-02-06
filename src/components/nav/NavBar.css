@@ -1,0 +1,62 @@
+/* Import the Lucida Handwriting font */
+@import url('https://fonts.googleapis.com/css2?family=Lucida+Handwriting&display=swap');
+
+/* Style for the entire navbar */
+.navbar {
+    background-image: url('https://i.ibb.co/HL7Ptzxr/Header-9.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lucida Handwriting', cursive;
+    color:#333;
+    border-bottom: 5px solid #f6efef; /* Tomato color border at the bottom */
+}
+
+/* Style for the logo (Joy) */
+.navbar .logo h1 {
+    font-size: 36px;
+    color: #333; /* A pinkish color for the logo */
+    margin: 0;
+}
+
+/* Style for the navigation links container */
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+/* Style for each navigation item */
+.nav-links li {
+    margin-left: 20px;
+}
+
+/* Style for the links */
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333; /* Tomato color for the link text */
+    transition: color 0.3s ease;
+}
+
+/* Change link color on hover */
+.nav-links a:hover {
+    color: #333; /* Pinkish color on hover */
+}
+
+/* Style for logout button (with the provided image) */
+.nav-links a:hover {
+    text-decoration: none;
+    background: url('https://i.ibb.co/n8ZH0sqq/Blank-Button.png') no-repeat center center;
+    background-size: cover;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Additional styling for the logout link when clicked */
+.nav-links a:active {
+    transform: scale(0.95); /* Slightly shrink the button when clicked */
+}

@@ -1,0 +1,47 @@
+/* Import the Lucida Handwriting font */
+@import url("https://fonts.googleapis.com/css2?family=Lucida+Handwriting&display=swap");
+
+body {
+	background-image: url("https://i.ibb.co/n8QgBDQ2/Slider-Image-6.jpg");
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	padding: 0;
+	font-family: "Lucida Handwriting", cursive;
+} /* Set the background image and apply styling for the welcome container */
+.welcome-container {
+	background-image: url("https://i.ibb.co/4n7cnrN2/Header-1.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #0e0200; /* Tomato color for text */
+	font-family: "Lucida Handwriting", cursive;
+	padding: 40px;
+	text-align: center;
+	border-radius: 10px;
+	max-width: 800px;
+	margin: 50px auto;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the main heading with the welcome message */
+h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+	color: #14010b; /* Pinkish color for the "Welcome to" text */
+}
+
+/* Style the subheading */
+h1 span:first-child {
+	color: #050002; /* Pinkish color for "Welcome to" */
+}
+
+h1 span:last-child {
+	color: hsl(12, 100%, 2%); /* Tomato color for "Joys Corner" */
+}
+
+/* Style the smaller text below the heading */
+.welcome-container div {
+	font-size: 24px;
+	color: #090000; /* White color for this text */
+	margin-top: 20px;
+}

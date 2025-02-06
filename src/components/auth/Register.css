@@ -1,0 +1,90 @@
+/* General layout for the container */
+.auth-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #ffe4e1;
+	flex-direction: column; /* Ensures form and the link are stacked vertically */
+}
+
+/* Form styling */
+.auth-form {
+	background: #ffccdc;
+	padding: 2rem;
+	border-radius: 12px;
+	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 400px;
+	text-align: center;
+	border: 2px solid #ff99c8;
+}
+
+/* Header styling */
+.header {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	color: #d63384;
+	font-weight: bold;
+}
+
+/* Fieldset (form fields) styling */
+.auth-fieldset {
+	border: none;
+	margin: 1rem 0;
+}
+
+.auth-form-input {
+	width: 100%;
+	padding: 0.75rem;
+	font-size: 1rem;
+	border: 1px solid #ff99c8;
+	border-radius: 12px;
+	background-color: #fff0f6;
+	color: #d63384;
+}
+
+.rounded-input {
+	border-radius: 12px;
+}
+
+/* Button styling */
+button {
+	background-color: #ff66a3;
+	color: white;
+	border: none;
+	padding: 1rem;
+	width: 100%;
+	border-radius: 24px;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: background 0.3s ease;
+	font-weight: bold;
+}
+
+button:hover {
+	background-color: #e60073;
+}
+
+/* Styling for the "Already a member?" link container */
+.login-link-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.login-link {
+	text-align: center;
+}
+
+.login-link a {
+	color: #ff66a3;
+	font-size: 0.9rem; /* Smaller font size */
+	text-decoration: none;
+	font-weight: normal; /* Normal weight */
+}
+
+.login-link a:hover {
+	color: #e60073;
+}
