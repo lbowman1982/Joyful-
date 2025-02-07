@@ -2,7 +2,9 @@ export const getPostsAndUserLikesWithTopics = () => {
 	return fetch(
 		"http://localhost:8088/posts?_embed=userLikedPosts&_expand=topic"
 	).then((res) => res.json())
+
 }
+
 
 export const newPostPost = (post) => {
 	return fetch("http://localhost:8088/posts", {

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { getAllTopics } from "../../services/topics"
 import "./Topics.css"
-export const TopicsDropDown = ({ setSelectedTopicId }) => {
+
+export const TopicsDropDown = ({ setSelectedTopicId, selectedTopicId }) => {
 	const [allTopics, setTopics] = useState([])
 
 	useEffect(() => {
@@ -11,12 +12,13 @@ export const TopicsDropDown = ({ setSelectedTopicId }) => {
 	}, [])
 
 	const handleChange = (event) => {
-		setSelectedTopicId(event.target.value)
+		const theTopicId = parseInt(event.target.value)
+		setSelectedTopicId(theTopicId)
 	}
 
 	return (
 		<div>
-			<select onChange={handleChange}>
+			<select value={selectedTopicId || ""} onChange={handleChange}>
 				<option value="">Select a Topic</option>
 				{allTopics.map((topic) => (
 					<option key={topic.id} value={topic.id}>
