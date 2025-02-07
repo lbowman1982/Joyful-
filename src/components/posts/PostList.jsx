@@ -8,7 +8,7 @@ import { PostItem } from "../posts/PostItem"
 
 export const PostList = ({ currentUser }) => {
 	const [allPosts, setAllPosts] = useState([])
-	const [selectedTopicId, setSelectedTopicId] = useState({})
+	const [selectedTopicId, setSelectedTopicId] = useState(null)
 	const [filteredPost, setFilteredPost] = useState([])
 
 	const navigate = useNavigate()
@@ -19,22 +19,14 @@ export const PostList = ({ currentUser }) => {
 		})
 	}, [])
 
-	const updatePostLikes = (updatedPost) => {
-		const updatedPosts = allPosts.map((post) =>
-			post.id === updatedPost.id
-				? { ...post, likes: updatedPost.likes }
-				: post
-		)
-		setAllPosts(updatedPosts)
-	}
-
 	useEffect(() => {
 		if (selectedTopicId) {
-			const topicId = parseInt(selectedTopicId)
-			const filtered = allPosts.filter((post) => post.topicId === topicId)
+			const filtered = allPosts.filter(
+				(post) => parseInt(post.topicId) === parseInt(selectedTopicId)
+			)
 			setFilteredPost(filtered)
 		} else {
-			setFilteredPost(allPosts)
+			setFilteredPost([])
 		}
 	}, [selectedTopicId, allPosts])
 
@@ -42,16 +34,18 @@ export const PostList = ({ currentUser }) => {
 		navigate("/posts/new-post")
 	}
 
+
+	const handlePostTileClick = (post) => {
+		navigate(`/posts/details/${post.id}`)
+	}
+
 	return (
-		<>
+		<div>
 			<div className="main">
 				{allPosts.map((postObj) => {
 					return (
 						<Link to={`/posts/details/${postObj.id}`} key={postObj.id}>
-							<PostItem
-								postObj={postObj}
-								updatePostLikes={updatePostLikes}
-							/>
+							<PostItem postObj={postObj} />
 						</Link>
 					)
 				})}
@@ -61,32 +55,37 @@ export const PostList = ({ currentUser }) => {
 				<h1>Topics</h1>
 				<TopicsDropDown setSelectedTopicId={setSelectedTopicId} />
 
-				<div>
-					<h3></h3>
-					{filteredPost.length > 0 ? (
-						<div>
-							{filteredPost.map((post) => (
-								<button key={post.id} className="filtered-post-button">
+				<div className="main">
+					{selectedTopicId !== null ? (
+						filteredPost.length > 0 ? (
+							filteredPost.map((post) => (
+								<button
+									key={post.id}
+									className="filtered-post-button"
+									onClick={() => handlePostTileClick(post)}// Navigate on click
+								>
 									{post.title}
 								</button>
-							))}
-						</div>
+							))
+						) : (
+							<p>No posts found for this topic.</p>
+						)
 					) : (
-						<p>No posts found for this topic.</p>
+						<p>Please select a topic to view posts.</p>
 					)}
 				</div>
-			</div>
-
-			<div className="main">
-				<div>
-					<button
-						className="post-title-button"
-						onClick={handleNewPostClick}
-					>
-						CLick Here To Write A New Post
-					</button>
+				<div></div>
+				<div className="main">
+					<div>
+						<button
+							className="post-title-button"
+							onClick={handleNewPostClick}
+						>
+							CLick Here To Write A New Post
+						</button>
+					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }

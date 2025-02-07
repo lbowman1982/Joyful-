@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-// import { getUserLikedPosts } from "../../services/userLikedPosts"
+
 
 export const PostItem = ({ postObj }) => {
 	const navigate = useNavigate()
@@ -22,11 +22,7 @@ export const PostItem = ({ postObj }) => {
 						</button>
 					</div>
 
-					<button
-					// onClick={handleLikeChange}
-					>
-						Like
-					</button>
+					
 
 					<div className="post-card">
 						<strong>Topic:</strong>
